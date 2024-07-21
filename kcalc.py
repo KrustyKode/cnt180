@@ -1,7 +1,7 @@
 # Name:                         speedo.py
 # Author:                       Michael Sineiro
 # Date of latest revision:      7/21/2024
-# Purpose:                      
+# Purpose:                      calculates cals burned at certain time intervals.
 
 # Calculates the total calories burned
 def calculateCaloriesBurned(minutes, ratePerMinute):
