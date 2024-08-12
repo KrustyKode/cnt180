@@ -58,10 +58,11 @@ statesAndCapitals = {
     "Wisconsin": "Madison",
     "Wyoming": "Cheyenne"
 }
-
+# Function to get user input and format it properly
 def getInput(prompt):
     return input(prompt).strip().title()
 
+# Function for the quiz
 def quiz(statesAndCapitals):
     correctCount = 0
     incorrectCount = 0
@@ -69,10 +70,12 @@ def quiz(statesAndCapitals):
     states = list(statesAndCapitals.keys())
     random.shuffle(states)
 
+    # Loop through each state and quiz the user
     for state in states:
         capital = statesAndCapitals[state]
         userInput = getInput(f"What is the capital of {state}? (or type 'quit' to exit): ")
 
+        # Allow the user to quit the quiz
         if userInput.lower() == "quit":
             break
 
@@ -87,11 +90,13 @@ def quiz(statesAndCapitals):
         continueQuiz = getInput("Do you want to continue? (yes/no): ").lower()
         if continueQuiz != "yes":
             break
-
+    
+    # Summary of quiz results
     print("\nQuiz Summary:")
     print(f"Correct answers: {correctCount}")
     print(f"Incorrect answers: {incorrectCount}")
     
+    # Display the states the user missed
     if incorrectStates:
         print("States you missed:")
         for state in incorrectStates:
