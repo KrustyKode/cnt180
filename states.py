@@ -1,7 +1,7 @@
-# Name:                         speedo.py
+# Name:                         states.py
 # Author:                       Michael Sineiro
-# Date of latest revision:      7/21/2024
-# Purpose:                      Uses an If/else block that prints a message based on inputted speed.
+# Date of latest revision:      8/12/2024
+# Purpose:                      Uses a Dictionary w/ States and capitals to make a quiz.
 
 import random
 
@@ -58,6 +58,7 @@ statesAndCapitals = {
     "Wisconsin": "Madison",
     "Wyoming": "Cheyenne"
 }
+
 # Function to get user input and format it properly
 def getInput(prompt):
     return input(prompt).strip().title()
